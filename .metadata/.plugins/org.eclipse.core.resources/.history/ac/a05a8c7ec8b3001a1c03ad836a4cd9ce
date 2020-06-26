@@ -1,0 +1,11 @@
+package algorithms;
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+		int[] arr = {6,4,5,7,1,2,3};
+		BubbleSort
+
+	}
+
+}

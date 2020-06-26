@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Gmail Suite" duration-ms="101" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="101" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+      <class name="com.factory.FactoryTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.factory.FactoryTest@543788f3]" name="beforeClass" is-config="true" duration-ms="7" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.factory.FactoryTest@543788f3]" name="beforeClass" is-config="true" duration-ms="7" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="methodtwo()[pri:0, instance:com.factory.FactoryTest@4ae82894, instance params:[1, one]]" name="methodtwo" duration-ms="13" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodtwo -->
+        <test-method status="PASS" signature="methodtwo()[pri:0, instance:com.factory.FactoryTest@543788f3, instance params:[2, two]]" name="methodtwo" duration-ms="28" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodtwo -->
+        <test-method status="PASS" signature="methodOne()[pri:0, instance:com.factory.FactoryTest@543788f3, instance params:[2, two]]" name="methodOne" duration-ms="17" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodOne -->
+        <test-method status="PASS" signature="methodOne()[pri:0, instance:com.factory.FactoryTest@4ae82894, instance params:[1, one]]" name="methodOne" duration-ms="23" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodOne -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.factory.FactoryTest@543788f3]" name="afterClass" is-config="true" duration-ms="3" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.factory.FactoryTest@543788f3]" name="afterClass" is-config="true" duration-ms="0" started-at="2020-04-02T19:28:28 IST" finished-at="2020-04-02T19:28:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.factory.FactoryTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Gmail Suite -->
+</testng-results>

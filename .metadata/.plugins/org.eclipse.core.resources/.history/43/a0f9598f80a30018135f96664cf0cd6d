@@ -1,0 +1,18 @@
+package com.extract;
+import java.awt.*;
+
+
+import javax.swing.*;
+
+
+public class MainRun {
+
+	public static void main(String[] args)
+	{
+		String inputurl = "";
+		inputurl = JOptionPane.showInputDialog("Enter the URL of the Scorecard");
+		System.out.println(inputurl);
+		
+				
+	}
+}

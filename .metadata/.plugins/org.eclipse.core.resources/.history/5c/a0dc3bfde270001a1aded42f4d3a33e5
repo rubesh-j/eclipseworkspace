@@ -1,0 +1,22 @@
+package queuePractice;
+
+import stackpractice.Stack;
+
+public class MainMethod {
+
+	public static Queue<String> data ;
+	public static void main(String[] args) throws IllegalAccessException {
+		data = new Queue() ;
+		enterQueue();
+		data.checkSpaceRemaining();
+		data.size();
+	}
+	
+	public static void enterQueue() {
+		data.pushToQueue("One");
+		data.pushToQueue("two");
+		data.pushToQueue("three");
+		data.pushToQueue("four");
+	}
+	
+}

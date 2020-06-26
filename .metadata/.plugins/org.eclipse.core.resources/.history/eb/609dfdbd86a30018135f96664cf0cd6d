@@ -1,0 +1,24 @@
+package com.extract;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ScoreCardElements {
+	WebDriver driver;
+	By teamnames = By.xpath("//span[@class='cscore_name cscore_name--long']"); 			
+	public ScoreCardElements(WebDriver driver)
+	{
+		this.driver = driver;		
+	}
+	
+	public void getTeams(){
+		List<WebElement> teamlist = driver.findElements(teamnames);
+		teamlist.forEach(team->{
+			System.out.println("Playing Teams : " + team.getText());
+		});
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Cucumber/Extent.html&apos; to &apos;Extent_CucumberModel.html&apos;" description="Rename resource &apos;Extent.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Extent.html" name="Extent_CucumberModel.html" stamp="1588243436982" updateReferences="true"/>
+</session>

@@ -1,0 +1,7 @@
+import java.util.regex.Pattern;
+
+public class StringRegularExpr {
+ public static void main(String[] args) {
+	System.out.println(Pattern.matches("\\d\\w*", "Rubesh2012"));
+}
+}

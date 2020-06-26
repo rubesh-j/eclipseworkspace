@@ -1,0 +1,55 @@
+package queuePractice;
+
+public class Queue<T> {
+	private T[] data;
+	private int front;
+	private int end;
+	
+	public Queue(){
+		data = (T[])new Object[100];
+		front =-1;
+		end=-1;
+	}
+	
+	public int size() throws IllegalAccessException
+	{
+		if(front==-1 && end==-1)
+		{
+			throw new IllegalAccessException("Queue is Empty");
+		}
+		else {
+			return end - front +1;
+		}
+	}
+	
+	public void pushToQueue(T t) {
+		if(front==-1 && end==-1)
+		{
+			front++;
+			end++;
+			data[end]=t;
+		}
+		else {
+			end++;
+			data[end]=t;
+		}
+	}
+	
+	public T pullFromQueue() throws IllegalAccessException {
+		T t = null;
+		if(front==-1 && end==-1)
+		{
+			throw new IllegalAccessException("Queue is Empty");
+		}
+		else {
+			t = data[front];
+			data[front] = null;
+			front++;
+		}
+		return t;
+	}
+	
+	public int checkSpaceRemaining() {
+		return (end+1) % data.length;
+	}
+}

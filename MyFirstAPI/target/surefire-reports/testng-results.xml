@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-22T18:03:15Z" name="sampleTest.Test1" finished-at="2020-05-22T18:03:15Z" duration-ms="34">
+    <groups>
+    </groups>
+    <test started-at="2020-05-22T18:03:15Z" name="Command line test" finished-at="2020-05-22T18:03:15Z" duration-ms="34">
+      <class name="sampleTest.Test1">
+        <test-method signature="studentTest()" started-at="2020-05-22T18:03:15Z" name="studentTest" finished-at="2020-05-22T18:03:15Z" duration-ms="14" status="PASS">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

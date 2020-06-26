@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1864" started-at="2020-06-26T20:39:28 IST" finished-at="2020-06-26T20:39:30 IST">
+    <groups>
+      <group name="cucumber">
+        <method signature="CustomTestNGRunner.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="runScenario" class="com.rubesh.Runner.CustomTestNGRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="1864" started-at="2020-06-26T20:39:28 IST" finished-at="2020-06-26T20:39:30 IST">
+      <class name="com.rubesh.Runner.AppTestRunner">
+        <test-method status="PASS" signature="intializeMethod()[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="intializeMethod" is-config="true" duration-ms="163" started-at="2020-06-26T20:39:28 IST" finished-at="2020-06-26T20:39:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializeMethod -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="setUpClass" is-config="true" duration-ms="28" started-at="2020-06-26T20:39:28 IST" finished-at="2020-06-26T20:39:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="runScenario" duration-ms="319" started-at="2020-06-26T20:39:28 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-06-26T20:39:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Scenario 1 "Test 1""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validating Extent Report"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="runScenario" duration-ms="28" started-at="2020-06-26T20:39:28 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-06-26T20:39:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Scenario 1 "Test 2""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validating Extent Report"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="runScenario" duration-ms="35" started-at="2020-06-26T20:39:28 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-06-26T20:39:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Scenario 1 "Test 3""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validating Extent Report"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="runScenario" duration-ms="22" started-at="2020-06-26T20:39:28 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-06-26T20:39:29 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Scenario 1 "Test 4""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validating Extent Report"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="runScenario" duration-ms="62" started-at="2020-06-26T20:39:29 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-06-26T20:39:29 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Scenario 2"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validating Extent Report"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [The Lion, the Witch and the Wardrobe] but found [The Devil in the White City]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [The Lion, the Witch and the Wardrobe] but found [The Devil in the White City]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.rubesh.Cucumber.App.i_check_for_the_in_step(App.java:93)
+at ✽.I check for the title in step(file:///D:/EclipseWorkSpace/Cucumber/src/main/java/feature/First.feature:45)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="runScenario" duration-ms="30" started-at="2020-06-26T20:39:29 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-06-26T20:39:29 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Scenario 3"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FeatureFile2"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="tearDownClass" is-config="true" duration-ms="277" started-at="2020-06-26T20:39:29 IST" finished-at="2020-06-26T20:39:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.rubesh.Runner.AppTestRunner@397fbdb]" name="afterTest" is-config="true" duration-ms="799" started-at="2020-06-26T20:39:29 IST" finished-at="2020-06-26T20:39:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.rubesh.Runner.AppTestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

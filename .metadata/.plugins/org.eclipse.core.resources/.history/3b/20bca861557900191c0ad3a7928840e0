@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class FizzBUzz {
+	  public static void main(String args[] ) throws Exception {
+	       Thread t1 = new Thread(new Runnable(){
+
+			@Override
+			public void run() {
+				System.out.println("Starting Thread 1");
+				
+			}
+	    	   
+	       });
+	       
+	       Thread t2 = new Thread(new Runnable(){
+
+				@Override
+				public void run() {
+					System.out.println("Starting Thread 2");
+					
+				}
+		    	   
+		       });
+	       
+	       t1.start();
+	       Thread.sleep(10);
+	       t2.start();
+	            
+	    }
+}

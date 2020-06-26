@@ -1,0 +1,17 @@
+package algorithms;
+
+
+public class BubbleSort<T> {
+
+	public static void sort(T[] arr)
+	{
+		int size = arr.length;
+		for(int i=0;i<size-1;i++)
+		{
+			if(arr[i] > arr[i+1])
+			{
+				int temp = 
+			}
+		}
+	}
+}

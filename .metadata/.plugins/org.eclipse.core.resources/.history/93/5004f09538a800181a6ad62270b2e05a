@@ -1,0 +1,62 @@
+package com.extract;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ScoreCardElements {
+	WebDriver driver;
+	By teamnames = By.xpath("//a[@class='app_partial']/span[1]"); 	
+	By batsmenelements = By.xpath("//div[@class='col-b']//div[@class='flex-row']/div[@class='wrap batsmen']");
+	public ScoreCardElements(WebDriver driver)
+	{
+		this.driver = driver;		
+	}
+	
+	public HashMap<String , String> getTeams(){
+		List<WebElement> teamlist = driver.findElements(teamnames);
+		HashMap<String , String>  teammap = new HashMap<String,String>();
+		int i = 0;
+		teamlist.forEach(team->{			
+			if(!team.getText().equals("")){
+				System.out.println("Playing Teams : " + team.getText());
+				teammap.put("Team " + i, team.getText());
+				 getBatsmenDetails(team.getText());
+			}
+		});
+		return teammap;
+	}
+	
+	public void getBatsmenDetails(String teamName){
+		List<WebElement> batsmenlist = driver.findElements(batsmenelements);
+		batsmenlist.forEach(batsmen->{
+			WebElement eachBatsmen = batsmen.findElement(By.xpath("div[@class='cell batsmen']/a"));
+			WebElement wicketInfo;
+			ArrayList<String> wicketinfo = new ArrayList<String>();
+			ArrayList<String> data = new ArrayList<String>();
+			try{
+				wicketInfo= batsmen.findElement(By.xpath("div[@class='cell commentary']/a"));
+				wicketinfo.add(wicketInfo.getText());
+			}
+			catch(NoSuchElementException e)
+			{
+				
+			}
+			List<WebElement> batsmenStats = batsmen.findElements(By.xpath("div[@class='cell runs']"));			
+			batsmenStats.forEach(stats->{				
+				data.add(stats.getText());
+			});			
+			String teamname = eachBatsmen.findElement(By.xpath("ancestor::li[@class='accordion-item']/div[1]/a")).getText();
+			if(teamname.contains(teamName))
+			{
+			System.out.println(teamname.split("\\(")[0].replaceAll("Innings", "") + " : Batsman name :" + eachBatsmen.getText() + " || Wicket Info : " + wicketinfo + " || Score : " + data);
+			}
+		});
+		
+	}
+}

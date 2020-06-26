@@ -1,0 +1,42 @@
+package hashCodePract;
+
+public class Offers {
+	private String name;
+	private int offerId;
+	private int price;
+
+	public Offers() {
+
+	}
+
+	public Offers(String name, int offerId, int price) {
+
+		this.name = name;
+		this.offerId = offerId;
+		this.price = price;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getOfferId() {
+		return offerId;
+	}
+
+	public void setOfferId(int offerId) {
+		this.offerId = offerId;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+}

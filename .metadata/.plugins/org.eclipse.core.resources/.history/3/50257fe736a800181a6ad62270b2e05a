@@ -1,0 +1,27 @@
+package com.extract;
+import java.awt.*;
+import java.util.HashMap;
+
+import javax.swing.*;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class MainRun {
+
+	public static void main(String[] args)
+	{
+		String inputurl = "";
+		System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+		inputurl = JOptionPane.showInputDialog("Enter the URL of the Scorecard");
+		System.out.println(inputurl);
+		HashMap<String , String>  teammap = new HashMap<String,String>();
+		WebDriver driver = new ChromeDriver();
+		driver.get(inputurl);
+		ScoreCardElements scorecard = new ScoreCardElements(driver);
+		teammap = scorecard.getTeams();		
+		System.out.println(teammap);
+						
+	}
+}

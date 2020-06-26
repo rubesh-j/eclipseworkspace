@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class CountTriplets {
+
+	static void countTriplets(List<Long> arr, long r) {
+		Collections.sort(arr);
+		List<Long> multiplyList = new ArrayList<Long>();
+		Long tempVal = 1L;
+		while(tempVal< arr.get(arr.size() -1)) {
+			tempVal = tempVal*r;
+			multiplyList.add(tempVal);
+			System.out.println(tempVal);
+		}
+			System.out.println(multiplyList);
+	}
+	
+	public static void main(String[] args) {
+		List<Long> data = new ArrayList<Long>(Arrays.asList(1L,5L,5L,25L,125L));
+		countTriplets(data, 5);
+	}
+}
+
+	

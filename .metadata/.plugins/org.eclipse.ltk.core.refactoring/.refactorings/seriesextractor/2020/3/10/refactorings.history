@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.cricstats.seriesextractor.uiPages.PlayerImgUrl.java&apos; to &apos;GetPlayerImgUrl.java&apos;&#x0D;&#x0A;- Original project: &apos;seriesextractor&apos;&#x0D;&#x0A;- Original element: &apos;com.cricstats.seriesextractor.uiPages.PlayerImgUrl.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.cricstats.seriesextractor.uiPages.GetPlayerImgUrl.java&apos;" description="Rename compilation unit &apos;PlayerImgUrl.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.cricstats.seriesextractor.uiPages{PlayerImgUrl.java" name="GetPlayerImgUrl.java" references="false" stamp="1583411545073" version="1.0"/>
+</session>

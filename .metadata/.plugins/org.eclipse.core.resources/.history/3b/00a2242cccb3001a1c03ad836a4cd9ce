@@ -1,0 +1,22 @@
+package algorithms;
+
+import java.util.Arrays;
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+		/*Integer[] arr = {6,4,5,7,1,2,3};
+		BubbleSort<Integer> bubblesort = new BubbleSort<>();
+		bubblesort.sort(arr);
+		System.out.println(Arrays.toString(arr));*/
+		String[] name = {"Rubesh","Monisha","Aadhiya"};
+		BubbleSort<String> bubblesort2 = new BubbleSort<>();
+		bubblesort2.sort(name);
+		System.out.println(Arrays.toString(name));
+		Arrays.stream(name).forEach(n -> {
+			System.out.println(n);
+			System.out.println(n.hashCode());
+			});
+	}
+
+}

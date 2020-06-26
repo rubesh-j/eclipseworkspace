@@ -1,0 +1,88 @@
+package com.extract;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ScoreCardElements {
+	WebDriver driver;
+	By teamnames = By.xpath("//a[@class='app_partial']/span[1]"); 	
+	By batsmenelements = By.xpath("//div[@class='col-b']//div[@class='flex-row']/div[@class='wrap batsmen']");
+	int i = 0;
+	public ScoreCardElements(WebDriver driver)
+	{
+		this.driver = driver;		
+	}
+	
+	public HashMap<String , String> getTeams(String outputfilename){
+		List<WebElement> teamlist = driver.findElements(teamnames);
+		HashMap<String , String>  teammap = new HashMap<String,String>();
+		 i = 0;
+		teamlist.forEach(team->{			
+			if(!team.getText().equals("")){
+				System.out.println("Playing Teams : " + team.getText());
+				Workbook workbook = null;
+				try {
+					 workbook = WorkbookFactory.create(new FileInputStream(outputfilename));
+				} catch (Exception e) {					
+					e.printStackTrace();
+				} 
+				workbook.createSheet(team.getText().split(" ")[0] + "Batting");
+				teammap.put("Team " + i, team.getText());
+				getBatsmenDetails(team.getText());
+			}
+			i++;
+		});
+		return teammap;
+	}
+	
+	public void getBatsmenDetails(String teamName){
+		List<WebElement> batsmenlist = driver.findElements(batsmenelements);
+		batsmenlist.forEach(batsmen->{
+			WebElement eachBatsmen = batsmen.findElement(By.xpath("div[@class='cell batsmen']/a"));
+			WebElement wicketInfo;
+			ArrayList<String> wicketinfo = new ArrayList<String>();
+			ArrayList<String> data = new ArrayList<String>();
+			// to get the wicket info
+			try{
+				wicketInfo= batsmen.findElement(By.xpath("div[@class='cell commentary']"));				
+				if(wicketInfo.getText().equals(""))
+				{
+					wicketInfo= batsmen.findElement(By.xpath("div[@class='cell commentary']/a"));	
+					wicketinfo.add(wicketInfo.getText());
+				}
+				else
+				{
+					wicketinfo.add(wicketInfo.getText());
+				}
+			}
+			catch(NoSuchElementException e)
+			{
+				e.printStackTrace();
+			}
+			// to get batsmen playing info
+			List<WebElement> batsmenStats = batsmen.findElements(By.xpath("div[@class='cell runs']"));			
+			batsmenStats.forEach(stats->{				
+				data.add(stats.getText());
+			});			
+			String teamname = eachBatsmen.findElement(By.xpath("ancestor::li[@class='accordion-item']/div[1]/a")).getText();
+			if(teamname.contains(teamName))
+			{
+			System.out.println(teamName + " : Batsman name :" + eachBatsmen.getText() + " || Wicket Info : " + wicketinfo + " || Score : " + data);
+			}
+		});
+		
+	}
+}

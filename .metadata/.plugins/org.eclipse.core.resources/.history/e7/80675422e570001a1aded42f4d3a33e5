@@ -1,0 +1,35 @@
+package queuePractice;
+
+import stackpractice.Stack;
+
+public class MainMethod {
+
+	public static Queue<String> data ;
+	public static void main(String[] args) throws IllegalAccessException {
+		data = new Queue() ;
+		//System.out.println(data.size());
+		enterQueue();
+		//System.out.println(data.checkSpaceRemaining());
+		System.out.println("Size : " + data.size());
+		System.out.println(data.pullFromQueue());
+		//System.out.println("Size : " + data.size());
+		System.out.println(data.pullFromQueue());
+		//System.out.println("Size : " + data.size());
+		System.out.println(data.pullFromQueue());
+		//System.out.println("Size : " + data.size());
+		System.out.println(data.pullFromQueue());
+		//System.out.println("Size : " + data.size());
+		//System.out.println(data.pullFromQueue());
+		enterQueue();
+		System.out.println("Size : " + data.size());
+		
+	}
+	
+	public static void enterQueue() {
+		data.pushToQueue("One");
+		data.pushToQueue("two");
+		data.pushToQueue("three");
+		data.pushToQueue("four");
+	}
+	
+}

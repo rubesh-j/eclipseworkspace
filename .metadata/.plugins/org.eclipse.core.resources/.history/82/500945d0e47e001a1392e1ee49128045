@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class ArrayPractice {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int val = scan.nextInt();
+
+		String data = scan.nextLine();
+		System.out.println(data);
+		System.out.println(val);
+	}
+}

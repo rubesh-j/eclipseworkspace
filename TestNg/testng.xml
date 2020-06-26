@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" verbose="1" name="Gmail Suite"
+	annotations="JDK" parallel="methods">
+
+	<test name="Test">
+
+
+		<classes>
+			<class name="com.factory.FactoryTest"/>
+
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
